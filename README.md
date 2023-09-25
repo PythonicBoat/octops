@@ -27,4 +27,4 @@
 - The buttons above and below each digit will cycle through the possibilities for that position.
 - The user has to enter the correct combination in order to complete the task.
 
-  <img width="124" alt="image" src="https://github.com/Afterdie/octops-final/assets/65562439/75f2fe52-7f62-41ac-94fa-d0e635646d87">
+<img width="124" alt="image" src="https://github.com/Afterdie/octops-final/assets/65562439/75f2fe52-7f62-41ac-94fa-d0e635646d87">
