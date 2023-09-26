@@ -20,6 +20,7 @@ class MainScreen(Screen):
     pass
 
 class MapScreen(Screen):
+    #call layout file
     pass
 
 class SiteBScreen(Screen):

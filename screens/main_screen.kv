@@ -3,13 +3,23 @@
         Rectangle:
             pos: self.pos
             size: self.size
-            source: 'screens/imgs/path-to-image.jpg'
+            source: 'assets/img/splashmenu.png'
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'assets/img/mascot.png'
+        
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'assets/img/logo.png'
+
     BoxLayout:
         Button:
-            text: 'Goto settings'
+            text: 'Play'
             size_hint: 0.5, 0.1
-            pos_hint: {'center_x': .5, 'center_y': .5}
-            on_press: root.manager.current = 'settings'
+            pos_hint: {'center_x': 0.5,'center_y': 0.5}
+            on_press: root.manager.current = 'map'
         Button:
             text: 'Quit'
             size_hint: 0.5, 0.1
