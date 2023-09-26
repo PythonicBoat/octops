@@ -34,7 +34,6 @@ class SpawnScreen(Screen):
 class Octops(App):
 
     def build(self):
-        self.icon = 'assets/images/main_mascot.png'
         sm = ScreenManager()
         sm.transition = NoTransition()
 
