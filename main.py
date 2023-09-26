@@ -7,34 +7,29 @@
 
 
 from kivy.config import Config 
-Config.set('graphics', 'resizable', False) #prevents the window from being resizable
-
 from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.core.window import Window
-Window.borderless = False
 from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
 from kivy.lang import Builder
 
+Window.size = (600,600)
+Window.resizable = False
+Window.borderless = True
 class MainScreen(Screen):
     pass
 
 class MapScreen(Screen):
     #call layout file
     pass
-
 class SiteBScreen(Screen):
     pass
-
 class SiteAScreen(Screen):
     pass
-
 class DoorsScreen(Screen):
     pass
-
 class SpawnScreen(Screen):
     pass
-
 class Octops(App):
 
     def build(self):
