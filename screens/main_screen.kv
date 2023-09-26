@@ -3,24 +3,30 @@
         Rectangle:
             pos: self.pos
             size: self.size
+            source: 'assets/img/main_splash.png'
+        Rectangle:
+            pos: 214,399
+            size: 453,227
             source: 'assets/img/main_logo.png'
         Rectangle:
-            pos: self.pos
-            size: self.size
+            pos: 132,419
+            size: 210,210
             source: 'assets/img/main_mascot.png'
-        
-        Rectangle:
-            pos: self.pos
-            size: self.size
-            source: 'assets/img/main_splash.png'
-
     BoxLayout:
+        padding: 50
+        spacing: 20
+        orientation: "vertical"
+
         Button:
             text: 'Play'
-            size_hint: 0.5, 0.1
-            pos_hint: {'center_x': 0.5,'center_y': 0.5}
+            pos_hint: {'center_x': 0.5}
+            size_hint: None,None
+            size: 134,62
             on_press: root.manager.current = 'map'
+
         Button:
             text: 'Quit'
-            size_hint: 0.5, 0.1
+            pos_hint: {'center_x': 0.5}
+            size_hint: None,None
+            size: 134,62
             on_press: root.manager.current = 'test'
