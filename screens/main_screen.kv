@@ -1,8 +1,16 @@
 <MainScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'screens/imgs/path-to-image.jpg'
     BoxLayout:
         Button:
             text: 'Goto settings'
+            size_hint: 0.5, 0.1
+            pos_hint: {'center_x': .5, 'center_y': .5}
             on_press: root.manager.current = 'settings'
         Button:
             text: 'Quit'
+            size_hint: 0.5, 0.1
             on_press: root.manager.current = 'test'
