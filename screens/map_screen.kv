@@ -1,8 +1,8 @@
 <MapScreen>:
-    canvas:
+    canvas.before:
         #map component
         Rectangle:
-            source: "assets/img/map_splash.png"
+            source: "assets/img/map_map.png"
             size: self.size
             pos: self.pos
 
@@ -23,6 +23,7 @@
             pos: self.pos
 
         Rectangle:
-            source: "assets/img/map_tspawn.png"
+            source: "assets/img/map_spawn.png"
             size: self.size
             pos: self.pos
+            on_touch_down: print("Buh")
