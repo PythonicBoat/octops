@@ -19,16 +19,17 @@ from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
 
 from screens.main import MainScreen
 from screens.map import MapScreen
-from screens.sitea import SiteAScreen
-from screens.siteb import SiteBScreen
+from screens.siteA import SiteAScreen
+from screens.siteB import SiteBScreen
 from screens.doors import DoorsScreen
 from screens.spawn import SpawnScreen
 from screens.map import MapScreen
 
-#---------------------Screen Imports---------------------#
+#---------------------Screen Layouts---------------------#
 
 Window.size = (600,600)
-Window.borderless = False
+Window.borderless = True
+
 class Octops(App):
 
     def build(self):
