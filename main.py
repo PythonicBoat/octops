@@ -5,7 +5,6 @@
 # Define window behaviours here such as size, transition
 
 
-
 from kivy.config import Config 
 Config.set('kivy','window_icon','assets/img/main_mascot.png') #setting this is enough for taskbar icon as well it will show up when it is built
 Config.set('graphics', 'resizable', False)
