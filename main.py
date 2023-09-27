@@ -15,19 +15,17 @@ from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
 from kivy.lang import Builder
 
 from screens.mainscreen import MainScreen
+from screens.siteA import SiteAScreen
+from screens.siteB import SiteBScreen
+from screens.doors import DoorsScreen
+from screens.tspawn import SpawnScreen
 
 Window.size = (600,600)
 Window.borderless = False
+
 class MapScreen(Screen):
     pass
-class SiteBScreen(Screen):
-    pass
-class SiteAScreen(Screen):
-    pass
-class DoorsScreen(Screen):
-    pass
-class SpawnScreen(Screen):
-    pass
+
 class Octops(App):
 
     def build(self):
