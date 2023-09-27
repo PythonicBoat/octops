@@ -19,12 +19,10 @@ from screens.siteA import SiteAScreen
 from screens.siteB import SiteBScreen
 from screens.doors import DoorsScreen
 from screens.tspawn import SpawnScreen
+from screens.map import MapScreen
 
 Window.size = (600,600)
 Window.borderless = False
-
-class MapScreen(Screen):
-    pass
 
 class Octops(App):
 
