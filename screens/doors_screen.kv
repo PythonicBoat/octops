@@ -4,3 +4,18 @@
             pos: self.pos
             size: self.size
             source: 'assets/img/doors_splash.png'
+
+
+    
+    FloatLayout:
+        Button:
+            size_hint: None,None
+            size: (80, 80)
+            pos: (12, 800)
+            background_color: 0,0,0,0
+            on_press: root.manager.current = 'map'
+
+            Image:
+                source: 'assets/img/button_return.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
