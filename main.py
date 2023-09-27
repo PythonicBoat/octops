@@ -11,33 +11,27 @@ Config.set('kivy','window_icon','assets/img/main_mascot.png') #setting this is e
 Config.set('graphics', 'resizable', False)
 from kivy.app import App
 from kivy.core.window import Window
-from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
-from kivy.lang import Builder
 
-from screens.mainscreen import MainScreen
-from screens.siteA import SiteAScreen
-from screens.siteB import SiteBScreen
+from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
+
+#---------------------Screen Imports---------------------#
+
+from screens.main import MainScreen
+from screens.map import MapScreen
+from screens.sitea import SiteAScreen
+from screens.siteb import SiteBScreen
 from screens.doors import DoorsScreen
-from screens.tspawn import SpawnScreen
+from screens.spawn import SpawnScreen
+
+#---------------------Screen Imports---------------------#
 
 Window.size = (600,600)
 Window.borderless = False
-
-class MapScreen(Screen):
-    pass
-
 class Octops(App):
 
     def build(self):
         sm = ScreenManager()
         sm.transition = NoTransition()
-
-        Builder.load_file('screenLayout/map_screen.kv')
-        Builder.load_file('screenLayout/siteb_screen.kv')
-        Builder.load_file('screenLayout/sitea_screen.kv')
-        Builder.load_file('screenLayout/doors_screen.kv')
-        Builder.load_file('screenLayout/spawn_screen.kv')    
-
 
         sm.add_widget(MainScreen(name='main'))
         sm.add_widget(MapScreen(name='map'))
