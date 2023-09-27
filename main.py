@@ -28,7 +28,10 @@ from screens.map import MapScreen
 #---------------------Screen Layouts---------------------#
 
 Window.size = (600,600)
-Window.borderless = True
+Window.borderless = False
+Window.draggable = True
+Window.title = "Octops"
+Window.icon = "assets/img/main_mascot.png"
 
 class Octops(App):
 
