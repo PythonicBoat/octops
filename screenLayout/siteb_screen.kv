@@ -7,31 +7,30 @@
 
         Rectangle:
             source: "assets/img/siteb_bomb.png"
-            size: 596, 516
-            pos: 120,280
-        
-        Rectangle:
-            source: "assets/img/siteb_btnDefuse.png"
-            size: 274, 91
-            pos: 311,84
-
-        Rectangle:
-            source: "assets/img/siteb_defuseicon1.png"
-            size: 75, 75
-            pos: 550,130
-
-        Rectangle:
-            source: "assets/img/siteb_defuseicon2.png"
-            size: 66, 75
-            pos: 280,55
+            size: dp(447), dp(387)
+            pos: dp(47), dp(162)
 
     FloatLayout:
         Button:
             size_hint: None,None
-            size: (80, 80)
-            pos: (12, 800)
+            size: dp(205), dp(68)
+            pos: dp(197), dp(43)
             background_color: 0,0,0,0
-            on_press: root.manager.current = 'map'
+            #define function here
+
+            Image:
+                source: 'assets/img/siteb_btn_defuse.png'
+                size_hint: (1, 1)
+                size: dp(205), dp(68)
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        Button:
+            size_hint: None,None
+            size: dp(60), dp(60)
+            pos: dp(12), dp(523)
+            background_color: 0,0,0,0
+            on_press: root.manager.current = 'main'
 
             Image:
                 source: 'assets/img/button_return.png'
