@@ -6,16 +6,11 @@ import random
 Builder.load_file('screenLayout/spawn_screen.kv')
 
 class SpawnScreen(Screen):
-    def generate_random_numbers(self):
-        # Generate 3 random numbers between 0 and 1
-        random_numbers = [random.random() for _ in range(3)]
-        return random_numbers
 
-    def check_slider_values(self, slider1_value, slider2_value, slider3_value):
-        random_numbers = self.generate_random_numbers()
-
+    def check_slider_values(self):
         # Check if each slider value matches the corresponding random number
-        if round(slider1_value, 2) == round(0.8, 2) and round(slider2_value, 2) == round(0.6, 2) and round(slider3_value, 2) == round(0.4, 2):
+        print(self.ids.slide1.value)
+        if ((self.ids.slide1.value < 80) and (self.ids.slide1.value > 70 )) and ((self.ids.slide2.value < 60)and ( self.ids.slide2.value > 50 )) and ((self.ids.slide3.value < 100) and (self.ids.slide3.value > 90 )):
             print("Mission successful!")
         else:
             print("Mission failed. Try again.")
