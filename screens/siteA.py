@@ -5,11 +5,12 @@ from kivy.core.audio import SoundLoader
 Builder.load_file('screenLayout/sitea_screen.kv')
 sound = SoundLoader.load('assets/audio/sitea_planted.wav')
 
+from .screen_check import set_sitea
 class SiteAScreen(Screen):
     pressed_buttons = []
 
     def show_overlay(self):
-        self.ids.overlay.opacity = 1
+        self.ids.overlay.opacity = 0.5
         self.pressed_buttons = []
 
     def change_img(self, button, idOG):
@@ -34,6 +35,7 @@ class SiteAScreen(Screen):
                 x = "Valid"
                 sound.play()
                 self.show_overlay()
+                set_sitea()
             else:
                 x = "Invalid"
 
