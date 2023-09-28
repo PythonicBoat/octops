@@ -4,13 +4,15 @@
             pos: self.pos
             size: self.size
             source: 'assets/img/spawn_splash.png'
-
     
     FloatLayout:
+        size_hint: None, None
+        size: 1200, 400  # Set the size of the FloatLayout to 1200x400 pixels
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}  # Center the FloatLayout
         Button:
             size_hint: None,None
-            size: dp(60), dp(60)
-            pos: dp(12), dp(523)
+            size: (80, 80)
+            pos: (12, 800)
             background_color: 0,0,0,0
             on_press: root.manager.current = 'map'
 
@@ -18,22 +20,23 @@
                 source: 'assets/img/button_return.png'
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
-
-        BoxLayout:
+        Slider:
             orientation: 'vertical'
-            size_hint: None, None
-            size: dp(300), dp(300)
-            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-            spacing: dp(10)
+            size_hint_x: None
+            width: 50
+            height: 500
+            pos_hint: {'center_x': 0.3, 'center_y': 0.5}  # Adjust position as needed
 
-            Slider:
-                orientation: 'vertical'
-                value: 0.5
+        Slider:
+            orientation: 'vertical'
+            size_hint_x: None
+            width: 50
+            height: 500
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}  # Centered
 
-            Slider:
-                orientation: 'vertical'
-                value: 0.5
-
-            Slider:
-                orientation: 'vertical'
-                value: 0.5
+        Slider:
+            orientation: 'vertical'
+            size_hint_x: None
+            width: 50
+            height: 500
+            pos_hint: {'center_x': 0.7, 'center_y': 0.5}  # Adjust position as needed
