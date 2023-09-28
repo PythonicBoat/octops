@@ -7,6 +7,7 @@ Builder.load_file('screenLayout/doors_screen.kv')
 sound = SoundLoader.load('assets/audio/doors_roger.wav')
 
 class DoorsScreen(Screen):
+    verified = False
 
     def increment_value(self, label_index):
         if(int(label_index.text) == 9):
@@ -25,5 +26,10 @@ class DoorsScreen(Screen):
         code = self.ids.label_1.text + self.ids.label_2.text + self.ids.label_3.text + self.ids.label_4.text
         print(code)
         if passcode == int(code):
+            return True
+
+    def verify_btn_press(self):
+        if not DoorsScreen.verified and DoorsScreen.verify(self):
+            DoorsScreen.verified = True
             set_doors()
             sound.play()
