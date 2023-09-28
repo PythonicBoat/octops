@@ -28,18 +28,6 @@
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
 
-        Button:
-            size_hint: None,None
-            size: dp(60), dp(60)
-            pos: dp(12), dp(523)
-            background_color: 0,0,0,0
-            on_press: root.manager.current = 'map'
-
-            Image:
-                source: 'assets/img/button_return.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
-        
         Image:
             id: overlay_black
             source: 'assets/img/overlay.png'
@@ -62,3 +50,15 @@
             color: 0,0,0,0
             size: dp(328), dp(235)
             pos: dp(-100), dp(0)
+
+        Button:
+            size_hint: None,None
+            size: dp(60), dp(60)
+            pos: dp(12), dp(523)
+            background_color: 0,0,0,0
+            on_press: root.manager.current = 'map'
+
+            Image:
+                source: 'assets/img/button_return.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y

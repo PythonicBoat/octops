@@ -19,8 +19,8 @@ from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
 
 from screens.main import MainScreen
 from screens.map import MapScreen
-from screens.sitea import SiteAScreen
-from screens.siteb import SiteBScreen
+from screens.siteA import SiteAScreen
+from screens.siteB import SiteBScreen
 from screens.doors import DoorsScreen
 from screens.spawn import SpawnScreen
 from screens.map import MapScreen
