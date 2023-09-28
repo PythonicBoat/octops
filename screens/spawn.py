@@ -11,11 +11,12 @@ class SpawnScreen(Screen):
         random_numbers = [random.random() for _ in range(3)]
         return random_numbers
 
-    def check_slider_values(self, slider1_value, slider2_value, slider3_value):
+    def check_slider_values(self):
         random_numbers = self.generate_random_numbers()
-
         # Check if each slider value matches the corresponding random number
-        if round(slider1_value, 2) == round(0.8, 2) and round(slider2_value, 2) == round(0.6, 2) and round(slider3_value, 2) == round(0.4, 2):
+        print(round(self.ids.slide1.value, 2))
+        print(round(0.8, 2))
+        if round(self.ids.slide1.value, 2) == round(0.8, 2) and round(self.ids.slide2.value, 2) == round(0.6, 2) and round(self.ids.slide3.value, 2) == round(0.4, 2):
             print("Mission successful!")
         else:
             print("Mission failed. Try again.")
