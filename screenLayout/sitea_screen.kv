@@ -5,9 +5,8 @@
             size: self.size
             source: 'assets/img/sitea_splash.png'
 
-
-
     FloatLayout:
+
         Button:
             size_hint: None,None
             size: dp(60), dp(60)
@@ -31,8 +30,10 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(148), dp(347)
-            on_press: root.change_img(self, 1)
-            on_press: root.check_product(self, 1)
+            disabled: True if overlay.opacity == 1 else False
+            on_press:
+                root.change_img(self, 1)
+                root.check_product(self, 1)
 
             Image:
                 id: 1
@@ -51,8 +52,10 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(261), dp(347)
-            on_press: root.change_img(self, 2)
-            on_press: root.check_product(self, 2)
+            disabled: True if overlay.opacity == 1 else False
+            on_press:
+                root.change_img(self, 2)
+                root.check_product(self, 2)
 
             Image:
                 id: 2
@@ -71,8 +74,10 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(375), dp(347)
-            on_press: root.change_img(self, 3)
-            on_press: root.check_product(self, 3)
+            disabled: True if overlay.opacity == 1 else False
+            on_press:
+                root.change_img(self, 3)
+                root.check_product(self, 3)
 
             Image:
                 id: 3
@@ -91,8 +96,10 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(148), dp(242)
-            on_press: root.change_img(self, 4)
-            on_press: root.check_product(self, 4)
+            disabled: True if overlay.opacity == 1 else False
+            on_press:
+                root.change_img(self, 4)
+                root.check_product(self, 4)
 
             Image:
                 id: 4
@@ -111,8 +118,10 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(261), dp(242)
-            on_press: root.change_img(self, 5)
-            on_press: root.check_product(self, 5)
+            disabled: True if overlay.opacity == 1 else False
+            on_press:
+                root.change_img(self, 5)
+                root.check_product(self, 5)
 
             Image:
                 id: 5
@@ -131,8 +140,10 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(375), dp(242)
-            on_press: root.change_img(self, 6)
-            on_press: root.check_product(self, 6)
+            disabled: True if overlay.opacity == 1 else False
+            on_press:
+                root.change_img(self, 6)
+                root.check_product(self, 6)
 
             Image:
                 id: 6
@@ -151,15 +162,16 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(148), dp(137)
-            on_press: root.change_img(self, 7)
-            on_press: root.check_product(self, 7)
+            disabled: True if overlay.opacity == 1 else False
+            on_press:
+                root.change_img(self, 7)
+                root.check_product(self, 7)
 
             Image:
                 id: 7
                 source: 'assets/img/symbols/off.png'
                 center_x: self.parent.center_x
                 center_y: self.parent.top - 10
-
 
         Button:
             id: 8
@@ -172,15 +184,16 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(261), dp(137)
-            on_press: root.change_img(self, 8)
-            on_press: root.check_product(self, 8)
+            disabled: True if overlay.opacity == 1 else False
+            on_press:
+                root.change_img(self, 8)
+                root.check_product(self, 8)
 
             Image:
                 id: 8
                 source: 'assets/img/symbols/off.png'
                 center_x: self.parent.center_x
                 center_y: self.parent.top - 10
-
 
         Button:
             id: 9
@@ -193,11 +206,20 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(375), dp(137)
-            on_press: root.change_img(self, 9)
-            on_press: root.check_product(self, 9)
+            disabled: True if overlay.opacity == 1 else False
+            on_press:
+                root.change_img(self, 9)
+                root.check_product(self, 9)
 
             Image:
                 id: 9
                 source: 'assets/img/symbols/off.png'
                 center_x: self.parent.center_x
                 center_y: self.parent.top - 10
+
+        BoxLayout:
+            id: overlay
+            orientation: 'vertical'
+            opacity: 0  # Initially hidden
+            Image:
+                source: 'assets/img/overlay.png'
