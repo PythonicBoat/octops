@@ -18,3 +18,23 @@
                 source: 'assets/img/button_return.png'
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
+
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: None, None
+            size: dp(300), dp(300)
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            spacing: dp(10)
+
+            Slider:
+                orientation: 'vertical'
+                value: 0.5
+
+            Slider:
+                orientation: 'vertical'
+                value: 0.5
+
+            Slider:
+                orientation: 'vertical'
+                value: 0.5
