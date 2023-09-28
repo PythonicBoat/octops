@@ -170,6 +170,21 @@
                 size: dp(33), dp(32)
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
+
+        #verify_btn
+        Button:
+            size_hint: None,None
+            size: dp(189), dp(68)
+            pos: dp(204), dp(141)
+            background_color: 0,0,0,0
+            on_press: root.verify()
+
+            Image:
+                source: 'assets/img/doors_btn_verify.png'
+                size_hint: (1, 1)
+                size: dp(189), dp(68)
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
     
 
         # Rectangle:
