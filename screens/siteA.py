@@ -6,7 +6,6 @@ from kivy.core.audio import SoundLoader
 Builder.load_file('screenLayout/sitea_screen.kv')
 sound = SoundLoader.load('assets/audio/sitea_planted.wav')
 
-
 class SiteAScreen(Screen):
     pressed_buttons = []
 
