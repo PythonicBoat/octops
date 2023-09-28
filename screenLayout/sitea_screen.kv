@@ -8,18 +8,6 @@
     FloatLayout:
 
         Button:
-            size_hint: None,None
-            size: dp(60), dp(60)
-            pos: dp(12), dp(523)
-            background_color: 0,0,0,0
-            on_press: root.manager.current = 'map'
-
-            Image:
-                source: 'assets/img/button_return.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
-
-        Button:
             id: 1
             text: "Φ"
             font_size: "65sp"
@@ -221,5 +209,21 @@
             id: overlay
             orientation: 'vertical'
             opacity: 0  # Initially hidden
-            Image:
+            AsyncImage:
                 source: 'assets/img/overlay.png'
+                allow_stretch: True
+                keep_ratio: False
+                size_hint: 1, 1
+
+        Button:
+            size_hint: None,None
+            size: dp(60), dp(60)
+            pos: dp(12), dp(523)
+            background_color: 0,0,0,0
+            on_press: root.manager.current = 'map'
+
+            Image:
+                source: 'assets/img/button_return.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
