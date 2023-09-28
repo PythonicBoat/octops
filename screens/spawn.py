@@ -15,10 +15,7 @@ class SpawnScreen(Screen):
         random_numbers = self.generate_random_numbers()
 
         # Check if each slider value matches the corresponding random number
-        if round(slider1_value, 2) == round(random_numbers[0], 2) and \
-           round(slider2_value, 2) == round(random_numbers[1], 2) and \
-           round(slider3_value, 2) == round(random_numbers[2], 2):
+        if round(slider1_value, 2) == round(0.8, 2) and round(slider2_value, 2) == round(0.6, 2) and round(slider3_value, 2) == round(0.4, 2):
             print("Mission successful!")
         else:
             print("Mission failed. Try again.")
-
