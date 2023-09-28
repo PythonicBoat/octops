@@ -18,6 +18,175 @@
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
 
+
+        Label:
+            id: label_1
+            text: "0"
+            size: dp(18), dp(28)
+            font_size: 40
+            size_hint: None, None
+            pos: dp(203), dp(286)
+
+        Label:
+            id: label_2
+            text: "0"
+            size: dp(18), dp(28)
+            font_size: 40
+            size_hint: None, None
+            pos: dp(262), dp(286)
+
+        Label:
+            id: label_3
+            text: "0"
+            size: dp(18), dp(28)
+            font_size: 40
+            size_hint: None, None
+            pos: dp(321), dp(286)
+
+        Label:
+            id: label_4
+            text: "0"
+            size: dp(18), dp(28)
+            font_size: 40
+            size_hint: None, None
+            pos: dp(380), dp(286)
+
+        #btn_up_1
+        Button:
+            size_hint: None,None
+            size: dp(33), dp(32)
+            pos: dp(196), dp(322)
+            background_color: 0,0,0,0
+            on_press: root.increment_value(label_1)
+
+            Image:
+                source: 'assets/img/doors_btn_up.png'
+                size_hint: (1, 1)
+                size: dp(33), dp(32)
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        #btn_up_2
+        Button:
+            size_hint: None,None
+            size: dp(33), dp(32)
+            pos: dp(254), dp(322)
+            background_color: 0,0,0,0
+            on_press: root.increment_value(label_2)
+
+            Image:
+                source: 'assets/img/doors_btn_up.png'
+                size_hint: (1, 1)
+                size: dp(33), dp(32)
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        #btn_up_3
+        Button:
+            size_hint: None,None
+            size: dp(33), dp(32)
+            pos: dp(313), dp(322)
+            background_color: 0,0,0,0
+            on_press: root.increment_value(label_3)
+
+            Image:
+                source: 'assets/img/doors_btn_up.png'
+                size_hint: (1, 1)
+                size: dp(33), dp(32)
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        #btn_up_4
+        Button:
+            size_hint: None,None
+            size: dp(33), dp(32)
+            pos: dp(371), dp(322)
+            background_color: 0,0,0,0
+            on_press: root.increment_value(label_4)
+
+            Image:
+                source: 'assets/img/doors_btn_up.png'
+                size_hint: (1, 1)
+                size: dp(33), dp(32)
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        #btn_down_1
+        Button:
+            size_hint: None,None
+            size: dp(33), dp(32)
+            pos: dp(196), dp(244)
+            background_color: 0,0,0,0
+            on_press: root.decrement_value(label_1)
+
+            Image:
+                source: 'assets/img/doors_btn_down.png'
+                size_hint: (1, 1)
+                size: dp(33), dp(32)
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        #btn_down_2
+        Button:
+            size_hint: None,None
+            size: dp(33), dp(32)
+            pos: dp(254), dp(244)
+            background_color: 0,0,0,0
+            on_press: root.decrement_value(label_2)
+
+            Image:
+                source: 'assets/img/doors_btn_down.png'
+                size_hint: (1, 1)
+                size: dp(33), dp(32)
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        #btn_down_3
+        Button:
+            size_hint: None,None
+            size: dp(33), dp(32)
+            pos: dp(313), dp(244)
+            background_color: 0,0,0,0
+            on_press: root.decrement_value(label_3)
+
+            Image:
+                source: 'assets/img/doors_btn_down.png'
+                size_hint: (1, 1)
+                size: dp(33), dp(32)
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        #btn_down_4
+        Button:
+            size_hint: None,None
+            size: dp(33), dp(32)
+            pos: dp(371), dp(244)
+            background_color: 0,0,0,0
+            on_press: root.decrement_value(label_4)
+
+            Image:
+                source: 'assets/img/doors_btn_down.png'
+                size_hint: (1, 1)
+                size: dp(33), dp(32)
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        #verify_btn
+        Button:
+            size_hint: None,None
+            size: dp(189), dp(68)
+            pos: dp(204), dp(141)
+            background_color: 0,0,0,0
+            on_press: root.verify()
+
+            Image:
+                source: 'assets/img/doors_btn_verify.png'
+                size_hint: (1, 1)
+                size: dp(189), dp(68)
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+    
+
         # Rectangle:
         #     size: (200, 200)
         #     pos: (100, 100)
