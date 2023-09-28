@@ -4,6 +4,7 @@ from kivy.core.audio import SoundLoader
 from .screen_check import passcode, set_doors
 
 Builder.load_file('screenLayout/doors_screen.kv')
+sound = SoundLoader.load('assets/audio/doors_roger.wav')
 
 class DoorsScreen(Screen):
 
@@ -25,3 +26,4 @@ class DoorsScreen(Screen):
         print(code)
         if passcode == int(code):
             set_doors()
+            sound.play()

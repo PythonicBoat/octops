@@ -11,6 +11,7 @@ sound = SoundLoader.load('assets/audio/siteb_defused.wav')
 
 class SiteBScreen(Screen):
     defused = False
+    
     @staticmethod
     def Delay(delay):
         return Animation(duration=delay)
