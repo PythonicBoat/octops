@@ -16,7 +16,8 @@ class SiteBScreen(Screen):
         return Animation(duration=delay)
 
     def on_enter(self):
-        self.ids.defuse_img.color = (1,1,1,1)
+        if sitea and doors and spawn and not SiteBScreen.defused:
+            self.ids.defuse_img.color = (1,1,1,1)
 
     def defuse_btn_press(self):
         if sitea and doors and spawn and not SiteBScreen.defused:
