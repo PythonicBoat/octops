@@ -8,7 +8,7 @@
 #------------------------Imports-------------------------#
 
 from kivy.config import Config 
-Config.set('kivy','window_icon','assets/img/main_mascot.png') #setting this is enough for taskbar icon as well it will show up when it is built
+Config.set('kivy','window_icon','assets/img/main_mascot.png')
 Config.set('graphics', 'resizable', False)
 from kivy.app import App
 from kivy.core.window import Window
@@ -19,19 +19,16 @@ from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
 
 from screens.main import MainScreen
 from screens.map import MapScreen
-from screens.siteA import SiteAScreen
-from screens.siteB import SiteBScreen
+from screens.sitea import SiteAScreen
+from screens.siteb import SiteBScreen
 from screens.doors import DoorsScreen
 from screens.spawn import SpawnScreen
 from screens.map import MapScreen
 
-#---------------------Screen Layouts---------------------#
+#--------------------------App--------------------------#
 
 Window.size = (600,600)
 Window.borderless = False
-Window.draggable = True
-Window.title = "Octops"
-Window.icon = "assets/img/main_mascot.png"
 
 class Octops(App):
 
