@@ -4,7 +4,6 @@ from kivy.lang import Builder
 from kivy.metrics import dp
 from kivy.core.audio import SoundLoader
 from kivy.clock import Clock
-
 from .screen_check import sitea, doors, spawn
 
 Builder.load_file('screenLayout/siteb_screen.kv')
