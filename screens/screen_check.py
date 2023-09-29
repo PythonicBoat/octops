@@ -2,6 +2,7 @@ sitea = False
 doors = False
 spawn = True
 passcode = 1275
+slider = [30, 50, 100]
 
 def set_sitea():
     global sitea

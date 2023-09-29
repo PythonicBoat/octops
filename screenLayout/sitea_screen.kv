@@ -1,11 +1,12 @@
 <SiteAScreen>:
-    canvas.before:
-        Rectangle:
+    FloatLayout:
+
+        Image:
+            id: splash_bg
+            opacity: 1
             pos: self.pos
             size: self.size
             source: 'assets/img/sitea_splash.png'
-
-    FloatLayout:
 
         Button:
             id: 1
@@ -18,7 +19,7 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(148), dp(347)
-            disabled: True if overlay.opacity == 1 else False
+            disabled: True if splash_bg_after.opacity == 1 else False
             on_press:
                 root.change_img(self, 1)
                 root.check_product(self, 1)
@@ -40,7 +41,7 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(261), dp(347)
-            disabled: True if overlay.opacity == 1 else False
+            disabled: True if splash_bg_after.opacity == 1 else False
             on_press:
                 root.change_img(self, 2)
                 root.check_product(self, 2)
@@ -62,7 +63,7 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(375), dp(347)
-            disabled: True if overlay.opacity == 1 else False
+            disabled: True if splash_bg_after.opacity == 1 else False
             on_press:
                 root.change_img(self, 3)
                 root.check_product(self, 3)
@@ -84,7 +85,7 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(148), dp(242)
-            disabled: True if overlay.opacity == 1 else False
+            disabled: True if splash_bg_after.opacity == 1 else False
             on_press:
                 root.change_img(self, 4)
                 root.check_product(self, 4)
@@ -106,7 +107,7 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(261), dp(242)
-            disabled: True if overlay.opacity == 1 else False
+            disabled: True if splash_bg_after.opacity == 1 else False
             on_press:
                 root.change_img(self, 5)
                 root.check_product(self, 5)
@@ -128,7 +129,7 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(375), dp(242)
-            disabled: True if overlay.opacity == 1 else False
+            disabled: True if splash_bg_after.opacity == 1 else False
             on_press:
                 root.change_img(self, 6)
                 root.check_product(self, 6)
@@ -150,7 +151,7 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(148), dp(137)
-            disabled: True if overlay.opacity == 1 else False
+            disabled: True if splash_bg_after.opacity == 1 else False
             on_press:
                 root.change_img(self, 7)
                 root.check_product(self, 7)
@@ -172,7 +173,7 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(261), dp(137)
-            disabled: True if overlay.opacity == 1 else False
+            disabled: True if splash_bg_after.opacity == 1 else False
             on_press:
                 root.change_img(self, 8)
                 root.check_product(self, 8)
@@ -194,7 +195,7 @@
             size_hint: None,None
             size: dp(80), dp(80)
             pos: dp(375), dp(137)
-            disabled: True if overlay.opacity == 1 else False
+            disabled: True if splash_bg_after.opacity == 1 else False
             on_press:
                 root.change_img(self, 9)
                 root.check_product(self, 9)
@@ -205,15 +206,12 @@
                 center_x: self.parent.center_x
                 center_y: self.parent.top - 10
 
-        BoxLayout:
-            id: overlay
-            orientation: 'vertical'
+        Image:
+            id: splash_bg_after
             opacity: 0  # Initially hidden
-            AsyncImage:
-                source: 'assets/img/overlay.png'
-                allow_stretch: True
-                keep_ratio: False
-                size_hint: 1, 1
+            pos: self.pos
+            size: self.size
+            source: 'assets/img/sitea_splash_after.png'
 
         Button:
             size_hint: None,None
@@ -226,4 +224,3 @@
                 source: 'assets/img/button_return.png'
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
-
