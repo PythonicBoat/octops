@@ -29,7 +29,6 @@ from screens.map import MapScreen
 
 Window.size = (600,600)
 Window.borderless = True
-
 class Octops(App):
 
     def build(self):
