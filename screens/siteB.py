@@ -32,6 +32,10 @@ class SiteBScreen(Screen):
             
             text_bubble = self.Delay(1) + Animation(color=(1,1,1,1), pos= (dp(233), dp(154)), duration=0.2, t='out_quad')
             text_bubble.start(self.ids.octocat_prompt)
+            text_bubble = self.Delay(3.5) + Animation(opacity= 0, duration=0.2)
+            text_bubble.start(self.ids.octocat_prompt)
+            text_defcon_bubble = self.Delay(4) + Animation(color=(1,1,1,1), pos= (dp(233), dp(155)), duration=0.2, t='out_quad')
+            text_defcon_bubble.start(self.ids.octocat_defcon_prompt)
 
             Clock.schedule_once(lambda dt:sound.play(), 0.7)
 

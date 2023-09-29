@@ -1,5 +1,5 @@
-sitea = False
-doors = False
+sitea = True
+doors = True
 spawn = True
 passcode = 1275
 slider = [30, 50, 100]

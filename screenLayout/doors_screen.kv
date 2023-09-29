@@ -9,19 +9,6 @@
                 keep_ratio: False
                 size_hint: 1, 1
 
-        Button:
-            size_hint: None,None
-            size: dp(60), dp(60)
-            pos: dp(12), dp(523)
-            background_color: 0,0,0,0
-            on_press: root.manager.current = 'map'
-
-            Image:
-                source: 'assets/img/button_return.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
-
-
         Label:
             id: label_1
             text: "0"
@@ -201,3 +188,15 @@
                 allow_stretch: True
                 keep_ratio: False
                 size_hint: 1, 1
+        
+        Button:
+            size_hint: None,None
+            size: dp(60), dp(60)
+            pos: dp(12), dp(523)
+            background_color: 0,0,0,0
+            on_press: root.manager.current = 'map'
+
+            Image:
+                source: 'assets/img/button_return.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
