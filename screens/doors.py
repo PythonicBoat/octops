@@ -22,7 +22,6 @@ class DoorsScreen(Screen):
             label_index.text = f"{int(label_index.text) - 1}"    
 
     def verify(self):
-        code = ""
         code = self.ids.label_1.text + self.ids.label_2.text + self.ids.label_3.text + self.ids.label_4.text
         print(code)
         if passcode == int(code):
