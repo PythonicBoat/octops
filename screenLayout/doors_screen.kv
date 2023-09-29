@@ -1,7 +1,6 @@
 <DoorsScreen>
     FloatLayout:
         Image:
-            id: splash_bg
             pos: self.pos
             size: self.size
             source: 'assets/img/doors_splash.png'
@@ -185,12 +184,9 @@
                 size: dp(189), dp(68)
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
-    
-
-        # Rectangle:
-        #     size: (200, 200)
-        #     pos: (100, 100)
-        #     color: (0,1,0)
-
-        #     Button: 
-        #         on_press: root.manager.current = 'doors'
+        Image:
+            id: splash_bg
+            source: 'assets/img/doors_splash_after.png'
+            size: self.size
+            pos: self.pos
+            opacity: 0
