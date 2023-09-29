@@ -31,5 +31,6 @@ class DoorsScreen(Screen):
     def verify_btn_press(self):
         if not DoorsScreen.verified and DoorsScreen.verify(self):
             DoorsScreen.verified = True
+            self.ids.splash_bg.source = 'assets/img/doors_splash_after.png'
             set_doors()
             sound.play()
