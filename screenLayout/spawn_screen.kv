@@ -7,12 +7,12 @@
     
     FloatLayout:
         size_hint: None, None
-        size: 1200, 400  # Set the size of the FloatLayout to 1200x400 pixels
+        size: self.size  # Set the size of the FloatLayout to 1200x400 pixels
         pos_hint: {'center_x': 0.5, 'center_y': 0.5}  # Center the FloatLayout
         Button:
             size_hint: None,None
-            size: (80, 80)
-            pos: (12, 800)
+            size: dp(60), dp(60)
+            pos: dp(12), dp(523)
             background_color: 0,0,0,0
             on_press: root.manager.current = 'map'
 

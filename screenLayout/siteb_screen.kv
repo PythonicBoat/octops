@@ -28,11 +28,15 @@
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
 
-        Image:
+        BoxLayout:
             id: overlay_black
-            source: 'assets/img/overlay.png'
-            color: 0,0,0,0
-            size: self.size
+            orientation: 'vertical'
+            opacity: 0  # Initially hidden
+            AsyncImage:
+                source: 'assets/img/overlay.png'
+                allow_stretch: True
+                keep_ratio: False
+                size_hint: 1, 1
 
         Image:
             id: octocat_prompt

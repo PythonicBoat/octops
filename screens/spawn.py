@@ -6,6 +6,8 @@ from .screen_check import slider
 
 Builder.load_file('screenLayout/spawn_screen.kv')
 
+from .screen_check import set_spawn
+
 class SpawnScreen(Screen):
 
     def check_slider_values(self):

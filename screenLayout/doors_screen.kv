@@ -1,11 +1,14 @@
 <DoorsScreen>
-    canvas.before:
-        Rectangle:
-            pos: self.pos
-            size: self.size
-            source: 'assets/img/doors_splash.png'
-
     FloatLayout:
+        BoxLayout:
+            id: splash_bg
+            opacity: 1
+            AsyncImage:
+                source: 'assets/img/doors_splash.png'
+                allow_stretch: True
+                keep_ratio: False
+                size_hint: 1, 1
+
         Button:
             size_hint: None,None
             size: dp(60), dp(60)
@@ -23,39 +26,43 @@
             id: label_1
             text: "0"
             size: dp(18), dp(28)
-            font_size: 40
+            font_name: 'assets/PixeloidSansBold-PKnYd.ttf'
+            color: 1, 178/255, 4/255, 1
             size_hint: None, None
-            pos: dp(203), dp(286)
+            pos: dp(214), dp(322)
 
         Label:
             id: label_2
             text: "0"
             size: dp(18), dp(28)
-            font_size: 40
+            font_name: 'assets/PixeloidSansBold-PKnYd.ttf'
+            color: 1, 178/255, 4/255, 1
             size_hint: None, None
-            pos: dp(262), dp(286)
+            pos: dp(266), dp(322)
 
         Label:
             id: label_3
             text: "0"
             size: dp(18), dp(28)
-            font_size: 40
+            font_name: 'assets/PixeloidSansBold-PKnYd.ttf'
+            color: 1, 178/255, 4/255, 1
             size_hint: None, None
-            pos: dp(321), dp(286)
+            pos: dp(317), dp(322)
 
         Label:
             id: label_4
             text: "0"
             size: dp(18), dp(28)
-            font_size: 40
+            font_name: 'assets/PixeloidSansBold-PKnYd.ttf'
+            color: 1, 178/255, 4/255, 1
             size_hint: None, None
-            pos: dp(380), dp(286)
+            pos: dp(369), dp(322)
 
         #btn_up_1
         Button:
             size_hint: None,None
             size: dp(33), dp(32)
-            pos: dp(196), dp(322)
+            pos: dp(206), dp(356)
             background_color: 0,0,0,0
             on_press: root.increment_value(label_1)
 
@@ -70,7 +77,7 @@
         Button:
             size_hint: None,None
             size: dp(33), dp(32)
-            pos: dp(254), dp(322)
+            pos: dp(258), dp(356)
             background_color: 0,0,0,0
             on_press: root.increment_value(label_2)
 
@@ -85,7 +92,7 @@
         Button:
             size_hint: None,None
             size: dp(33), dp(32)
-            pos: dp(313), dp(322)
+            pos: dp(310), dp(356)
             background_color: 0,0,0,0
             on_press: root.increment_value(label_3)
 
@@ -100,7 +107,7 @@
         Button:
             size_hint: None,None
             size: dp(33), dp(32)
-            pos: dp(371), dp(322)
+            pos: dp(362), dp(356)
             background_color: 0,0,0,0
             on_press: root.increment_value(label_4)
 
@@ -115,7 +122,7 @@
         Button:
             size_hint: None,None
             size: dp(33), dp(32)
-            pos: dp(196), dp(244)
+            pos: dp(206), dp(284)
             background_color: 0,0,0,0
             on_press: root.decrement_value(label_1)
 
@@ -130,7 +137,7 @@
         Button:
             size_hint: None,None
             size: dp(33), dp(32)
-            pos: dp(254), dp(244)
+            pos: dp(258), dp(284)
             background_color: 0,0,0,0
             on_press: root.decrement_value(label_2)
 
@@ -145,7 +152,7 @@
         Button:
             size_hint: None,None
             size: dp(33), dp(32)
-            pos: dp(313), dp(244)
+            pos: dp(310), dp(284)
             background_color: 0,0,0,0
             on_press: root.decrement_value(label_3)
 
@@ -160,7 +167,7 @@
         Button:
             size_hint: None,None
             size: dp(33), dp(32)
-            pos: dp(371), dp(244)
+            pos: dp(362), dp(284)
             background_color: 0,0,0,0
             on_press: root.decrement_value(label_4)
 
@@ -175,9 +182,9 @@
         Button:
             size_hint: None,None
             size: dp(189), dp(68)
-            pos: dp(204), dp(141)
+            pos: dp(206), dp(152)
             background_color: 0,0,0,0
-            on_press: root.verify()
+            on_press: root.verify_btn_press()
 
             Image:
                 source: 'assets/img/doors_btn_verify.png'
@@ -185,12 +192,12 @@
                 size: dp(189), dp(68)
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
-    
-
-        # Rectangle:
-        #     size: (200, 200)
-        #     pos: (100, 100)
-        #     color: (0,1,0)
-
-        #     Button: 
-        #         on_press: root.manager.current = 'doors'
+        BoxLayout:
+            id: splash_bg_after
+            orientation: 'vertical'
+            opacity: 0
+            AsyncImage:
+                source: 'assets/img/doors_splash_after.png'
+                allow_stretch: True
+                keep_ratio: False
+                size_hint: 1, 1
