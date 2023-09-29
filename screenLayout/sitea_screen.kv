@@ -1,12 +1,14 @@
 <SiteAScreen>:
     FloatLayout:
 
-        Image:
+        BoxLayout:
             id: splash_bg
             opacity: 1
-            pos: self.pos
-            size: self.size
-            source: 'assets/img/sitea_splash.png'
+            AsyncImage:
+                source: 'assets/img/sitea_splash.png'
+                allow_stretch: True
+                keep_ratio: False
+                size_hint: 1, 1
 
         Button:
             id: 1
@@ -206,12 +208,15 @@
                 center_x: self.parent.center_x
                 center_y: self.parent.top - 10
 
-        Image:
+        BoxLayout:
             id: splash_bg_after
-            opacity: 0  # Initially hidden
-            pos: self.pos
-            size: self.size
-            source: 'assets/img/sitea_splash_after.png'
+            orientation: 'vertical'
+            opacity: 0
+            AsyncImage:
+                source: 'assets/img/sitea_splash_after.png'
+                allow_stretch: True
+                keep_ratio: False
+                size_hint: 1, 1
 
         Button:
             size_hint: None,None
