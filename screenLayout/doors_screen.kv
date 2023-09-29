@@ -1,9 +1,11 @@
 <DoorsScreen>
     FloatLayout:
         Image:
+            id: splash_bg
             pos: self.pos
             size: self.size
             source: 'assets/img/doors_splash.png'
+            opacity: 1
 
         Button:
             size_hint: None,None
@@ -185,7 +187,7 @@
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
         Image:
-            id: splash_bg
+            id: splash_bg_after
             source: 'assets/img/doors_splash_after.png'
             size: self.size
             pos: self.pos

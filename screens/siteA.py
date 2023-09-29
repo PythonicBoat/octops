@@ -10,7 +10,7 @@ class SiteAScreen(Screen):
     pressed_buttons = []
 
     def show_overlay(self):
-        self.ids.overlay.opacity = 0.5
+        self.ids.overlay.opacity = 1
         self.pressed_buttons = []
 
     def change_img(self, button, idOG):
