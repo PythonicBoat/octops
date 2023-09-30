@@ -28,7 +28,9 @@ class SiteBScreen(Screen):
             MapScreen.stop_timer(self)
             Animation(color= (1,1,1,0.5), duration=0.5).start(self.ids.defuse_img)
 
-            self.ids.overlay_black.opacity = 0.6
+            Animation(opacity= 1, duration=0.5).start(self.ids.defcon_gif)
+
+            #self.ids.overlay_black.opacity = 0.6
 
             octocat_icon = self.Delay(0.5) + Animation(color=(1,1,1,1), pos= (dp(0), dp(0)), duration=0.2, t='out_quad')
             octocat_icon.start(self.ids.octocat_icon)
