@@ -1,7 +1,10 @@
+<h1 align='center'>Octops</h1>
 
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/cc-0.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+<h2 align='center'>
+<img src='https://forthebadge.com/images/badges/open-source.svg'>
+<img src='https://forthebadge.com/images/badges/cc-0.svg'>
+<img src='https://forthebadge.com/images/badges/built-with-love.svg'>
+</h2>
 
 # Table of Contents
 
@@ -18,8 +21,12 @@
 - [Kivy Properties](#kivy-properties)
 - [Kivy Events](#kivy-events)
 - [Kivy Graphics](#kivy-graphics)
-- [Kivy Layouts](#kivy-layouts)
-- [Kivy Screen Manager](#kivy-screen-manager)
+- [Label](#label)
+- [Button](#button)
+- [Image](#image)
+- [Slider](#slider)
+- [Kv layouts](#kv-layouts)
+- [Screens](#screens)
 - [Kivy Animations](#kivy-animations)
 5. [About the Game](#about-the-game)
 6. [File Structure](#file-structure)
@@ -435,7 +442,7 @@ To run the Octops Kivy app on your local machine, follow these steps:
 3. Navigate to the project directory:
 
    ```sh
-   cd octops-final
+   cd octops
    ```
 
 4. Run the application:
@@ -448,8 +455,17 @@ The app should launch, and you can interact with it to explore its functionality
 
 # Issue Listing
 
-This is the second section of your document.
+- [Issues <Description>](https://github.com/Afterdie/octops-final/issues)
 
 # Conclusion
 
 Thank you for being part of our community, and we look forward to sharing countless thrilling moments as we defuse bombs and tackle new challenges together!
+
+
+<p align="center">
+<a href="https://twitter.com/msckiit" target="_blank"><img align="center" src="https://github.com/MLSAKIIT/.github/assets/68675629/89732800-b189-402d-8b20-141b00fbac22" alt="MLSAKIIT" height="35" width="35" /></a>
+<a href="https://www.facebook.com/msakiit" target="_blank"><img align="center" src="https://github.com/MLSAKIIT/.github/assets/68675629/15dca717-70a3-406d-af82-8e25e91e6a91" alt="MLSAKIIT" height="35" width="35" /></a>
+<a href="https://discord.com/invite/P6VCP2Ry3q" target="_blank"><img align="center" src="https://github.com/MLSAKIIT/.github/assets/68675629/a5d1747f-b59f-487e-a473-dd9865864de6" alt="MLSAKIIT" height="35" width="35" /></a>
+<a href="https://www.linkedin.com/company/msckiit/" target="_blank"><img align="center" src="https://github.com/MLSAKIIT/.github/assets/68675629/73d3360f-c849-4171-ac81-02ebf291133f" alt="MLSAKIIT" height="35" width="35"/></a>
+<a href="https://www.instagram.com/msckiit/" target="_blank"><img align="center" src="https://github.com/MLSAKIIT/.github/assets/68675629/1a71caa3-e81a-4b84-ab3e-6c01b3e6df93" alt="MLSAKIIT" height="35" width="35" /></a>
+</p> 
