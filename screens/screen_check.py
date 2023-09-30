@@ -1,4 +1,4 @@
-devMode = True
+devMode = False
 
 sitea = devMode
 doors = devMode

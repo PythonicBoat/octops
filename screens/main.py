@@ -13,7 +13,7 @@ if sound:
 class MainScreen(Screen):
     
     def on_enter(self):
-        self.ids.timer_value.text = str(get_time())
+        self.ids.timer_value.text = str(get_time())+"s"
 
     def website(self):
         webbrowser.open('http://www.youtube.com')

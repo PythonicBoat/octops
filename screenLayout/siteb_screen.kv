@@ -48,26 +48,32 @@
                 keep_ratio: False
                 size_hint: 1, 1
 
-        Image:
+        AsyncImage:
             id: octocat_prompt
             source: 'assets/img/siteb_prompt.png'
-            size_hint: None, None
+            allow_stretch: True
+            keep_ratio: False
+            size_hint: None,None
             color: 0,0,0,0
             size: dp(302), dp(109)
             pos: dp(-100), dp(154)
 
-        Image:
+        AsyncImage:
             id: octocat_defcon_prompt
             source: 'assets/img/siteb_defcon_prompt.png'
-            size_hint: None, None
+            allow_stretch: True
+            keep_ratio: False
+            size_hint: None,None
             color: 0,0,0,0
             size: dp(340), dp(341)
             pos: dp(-100), dp(155)
 
-        Image:
+        AsyncImage:
             id: octocat_icon
             source: 'assets/img/siteb_ct.png'
-            size_hint: None, None
+            allow_stretch: True
+            keep_ratio: False
+            size_hint: None,None
             color: 0,0,0,0
             size: dp(328), dp(235)
             pos: dp(-100), dp(0)
