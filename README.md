@@ -1,10 +1,13 @@
+<h3 align="center">
+<img src='https://github.com/Afterdie/octops-final/assets/68675629/e698fb58-4fe9-4df3-8274-3bca68caa76c'>
+</h3>
 <h1 align='center'>Octops</h1>
 
-<h2 align='center'>
+<h3 align='center'>
 <img src='https://forthebadge.com/images/badges/open-source.svg'>
 <img src='https://forthebadge.com/images/badges/cc-0.svg'>
 <img src='https://forthebadge.com/images/badges/built-with-love.svg'>
-</h2>
+</h3>
 
 # Table of Contents
 
