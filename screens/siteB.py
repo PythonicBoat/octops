@@ -1,10 +1,12 @@
 from kivy.animation import Animation
-from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
-from kivy.metrics import dp
-from kivy.core.audio import SoundLoader
 from kivy.clock import Clock
-from .screen_check import passcode, get_spawn, get_doors, get_sitea
+from kivy.metrics import dp
+from kivy.uix.screenmanager import Screen
+from kivy.core.audio import SoundLoader
+
+from .screen_check import passcode, get_spawn, get_doors, get_sitea, get_time
+from .map import MapScreen
 
 Builder.load_file('screenLayout/siteb_screen.kv')
 sound = SoundLoader.load('assets/audio/siteb_defused.wav')
@@ -23,6 +25,7 @@ class SiteBScreen(Screen):
     def defuse_btn_press(self):
         if get_sitea() and get_doors() and get_spawn() and not SiteBScreen.defused:
             SiteBScreen.defused = True
+            MapScreen.stop_timer(self)
             Animation(color= (1,1,1,0.5), duration=0.5).start(self.ids.defuse_img)
 
             self.ids.overlay_black.opacity = 0.6

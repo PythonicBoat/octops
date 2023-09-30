@@ -1,5 +1,5 @@
 <MySlider@Slider>
-    cursor_image: "assets/img/knob.png"
+    cursor_image: "assets/img/spawn_knob.png"
     cursor_size: dp(70), dp(22.5)
     orientation: 'vertical'
     background_width: "0sp"
@@ -24,16 +24,19 @@
             id: slide1
             value: 0
             pos_hint: {'center_x': 0.34, 'center_y': 0.485}  # Centered
+            on_value: root.slider_val_change()
 
         MySlider:
             id: slide2
             value: 20
             pos_hint: {'center_x': 0.5, 'center_y': 0.485}  # Centered
+            on_value: root.slider_val_change()
 
         MySlider:
             id: slide3
             value: 10
             pos_hint: {'center_x': 0.66, 'center_y': 0.485}  # Adjust position as needed
+            on_value: root.slider_val_change()
 
         BoxLayout:
             id: splash_bg_after

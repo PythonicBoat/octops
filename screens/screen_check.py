@@ -1,8 +1,11 @@
-sitea = False
-doors = False
-spawn = False
-passcode = 1275
-slider = [100, 100, 100]
+devMode = True
+
+sitea = devMode
+doors = devMode
+spawn = devMode
+passcode = 1275 #linked to bomb hints png
+slider = [25, 55, 100] #linked to the marks on tracks
+time = 0
 
 def set_sitea():
     global sitea
@@ -24,3 +27,10 @@ def set_spawn():
 
 def get_spawn():
     return spawn
+
+def set_time(val):
+    global time
+    time  = val
+
+def get_time():
+    return time

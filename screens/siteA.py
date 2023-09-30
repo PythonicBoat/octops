@@ -1,13 +1,11 @@
-from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
+from kivy.uix.screenmanager import Screen
 from kivy.core.audio import SoundLoader
-
-Builder.load_file('screenLayout/sitea_screen.kv')
-sound = SoundLoader.load('assets/audio/sitea_planted.wav')
 
 from .screen_check import set_sitea
 
-
+Builder.load_file('screenLayout/sitea_screen.kv')
+sound = SoundLoader.load('assets/audio/sitea_planted.wav')
 class SiteAScreen(Screen):
     pressed_buttons = []
 

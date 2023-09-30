@@ -1,11 +1,11 @@
-from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
+from kivy.uix.screenmanager import Screen
 from kivy.core.audio import SoundLoader
+
 from .screen_check import passcode, set_doors
 
 Builder.load_file('screenLayout/doors_screen.kv')
 sound = SoundLoader.load('assets/audio/doors_roger.wav')
-
 class DoorsScreen(Screen):
     verified = False
 
