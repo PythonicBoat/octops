@@ -38,9 +38,53 @@ If you're eager to dive into the action and defuse the bomb, follow this documen
 
 # Steps to Contribution
 
-# Replit
+# Replit 
 
+0. Create an account at [Replit](https://replit.com/signup), click on `Continue with GitHub`
 
+1. Create a new Repl by clicking on `+ Create Repl` at homepage
+https://replit.com/new
+
+2. Clone the repository
+<details>
+    <summary>
+        Example
+    </summary>
+    <img src='https://github.com/Afterdie/octops-final/assets/68675629/a77136c6-1598-428f-97c9-73bd1c2e360a'>
+</details>
+
+3. Create repl 
+- GitHub URL : https://github.com/github-username/octops
+- Privacy : Public
+
+4. Add your changes 
+
+5. Under the `Tools` section of your repl look for `Git`
+<details>
+    <summary>
+        Example
+    </summary>
+    <img src='https://github.com/Afterdie/octops-final/assets/68675629/0d2b5b39-3427-4636-b880-ecbf8315f865'>
+</details>
+
+6. Add a Commit message and click on `Stage and commit all changes`
+<details>
+    <summary>
+        Example
+    </summary>
+    <img src='https://github.com/Afterdie/octops-final/assets/68675629/6e745895-3375-4e97-b856-b6a87fd8c93d'>
+</details>
+
+7. Click on Push and Sync with Remote
+<details>
+    <summary>
+        Example
+    </summary>
+    <img src='https://github.com/Afterdie/octops-final/assets/68675629/1b5679a8-48d0-45db-b7de-06d58e140cb4'>
+</details>
+
+8. Open Github and move to https://github.com/Afterdie/octops/ and create a Pull Request
+ 
 # CLI
 
 ## Fork the Repository
