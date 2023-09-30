@@ -8,8 +8,11 @@
 #------------------------Imports-------------------------#
 
 from kivy.config import Config 
+
 Config.set('kivy','window_icon','assets/img/main_mascot.png')
 Config.set('graphics', 'resizable', False)
+Config.set('input', 'mouse', 'mouse,disable_multitouch')
+
 from kivy.app import App
 from kivy.core.window import Window
 
