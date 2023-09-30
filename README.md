@@ -36,7 +36,19 @@
 Welcome to the open-source project, **Octops**! In Octops, we've combined the nostalgia of the original game **Counter Strike 1.6** with an exciting new gameplay concept.
 If you're eager to dive into the action and defuse the bomb, follow this documentation to set up and play the game. We'll guide you through the installation process and provide all the necessary information to get you started.
 
-# Steps to Contribution
+# Contributing Guidelines
+
+We welcome contributions from the community to enhance our Octops project. To maintain consistency and organization, please follow these guidelines when creating branches for your contributions:
+
+### Branch Naming Convention
+
+- Branch names should follow the format: `rollnumber_name`.
+
+**Example:**
+
+- If your name is abc and roll number is 123, your branch name would be: `123_abc`.
+
+**⚠️ Not following the naming convention will lead to immediate disqualification**
 
 # Replit 
 
