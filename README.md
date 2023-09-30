@@ -3,11 +3,6 @@
 </h3>
 <h1 align='center'>Octops</h1>
 
-<h3 align='center'>
-<img src='https://forthebadge.com/images/badges/open-source.svg'>
-<img src='https://forthebadge.com/images/badges/cc-0.svg'>
-<img src='https://forthebadge.com/images/badges/built-with-love.svg'>
-</h3>
 
 # Table of Contents
 
@@ -52,7 +47,7 @@ If you're eager to dive into the action and defuse the bomb, follow this documen
 
 Fork this repository by clicking on the `Fork` button on the top of this page. This will create a copy of this repository in your account.
 
-<img align="right" width="300" src="https://github.com/MLSAKIIT/first-contributions/blob/main/.github/assets/README/fork.png" alt="Fork the Repository"/>
+<img align="center" width="300" src="https://github.com/MLSAKIIT/first-contributions/blob/main/.github/assets/README/fork.png" alt="Fork the Repository"/>
 
 ---
 
@@ -60,7 +55,7 @@ Fork this repository by clicking on the `Fork` button on the top of this page. T
 
 Clone the forked repository to your machine. Go to your GitHub account, open the forked repository, click on the `Code` button and then click the `Copy to Clipboard` icon.
 
-<img align="right" width="300" src="https://github.com/MSCKIIT/first-contributions/blob/main/.github/assets/README/clone.png" alt="Clone the Repository"/>
+<img align="center" width="300" src="https://github.com/MSCKIIT/first-contributions/blob/main/.github/assets/README/clone.png" alt="Clone the Repository"/>
 
 Open a terminal and run the following git command:
 
@@ -68,7 +63,7 @@ Open a terminal and run the following git command:
 git clone https://github.com/<your_username>/octops.git
 ```
 
-<img align="right" width="300" src="https://github.com/MLSAKIIT/first-contributions/blob/main/.github/assets/README/copy-url.png" alt="Copy URL to Clipboard"/>
+<img align="center" width="300" src="https://github.com/MLSAKIIT/first-contributions/blob/main/.github/assets/README/copy-url.png" alt="Copy URL to Clipboard"/>
 
 ---
 ## Create a Branch
