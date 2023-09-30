@@ -3,7 +3,6 @@
 [![forthebadge](https://forthebadge.com/images/badges/cc-0.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
-
 # Table of Contents
 
 1. [Introduction](#introduction)
@@ -132,12 +131,11 @@ Congrats! You just completed the standard _fork -> clone -> edit -> pull request
 
 # Introduction to Python
 
-`Self`- 
 
 
 # Introduction to Kivy
 
-> Kivy is a free and open-source Python framework for creating cross-platform applications with a natural user interface, and it can be easily integrated into any python project.
+Kivy is a free and open-source Python framework for creating cross-platform applications with a natural user interface, and it can be easily integrated into any python project.
 
 ### Installation of Kivy
 
@@ -240,6 +238,68 @@ Rectangle:
     size: 100, 100
 ```
 
+### Label
+
+The Label widget in Kivy is used to display text or simple static content within your application. It's a fundamental widget for providing information, instructions, or identifying elements in the user interface.
+
+- **text**: Specifies the text content to be displayed within the label.
+- **font_size**: Sets the font size for the text.
+- **size**: Defines the size of the label based on its content.
+
+```kv
+Label:
+    text: "Welcome to Kivy!"
+    font_size: '24sp'
+    size: self.texture_size
+```
+
+### Button
+
+- **Text**: The text displayed on the button.
+- **on_release**: An event that gets triggered when the button is released.
+- **on_press**: Calls a function when button is pressed
+- **disabled**: Controls whether button will remain enabled/disabled. Can be controlled by conditions
+- **size**: Sets the dimensions of the widget. `dp` parameter on the dimensions refers to density-independent pixels which are used to ensure consistent sizing across different devices.
+
+```kv
+Button:
+    text: "Click Me"
+    size: dp(147), dp(61)
+    on_release: root.button_released()
+    on_press: root.change_image()
+    disabled: True if bg_img.opacity == 0 else False
+```
+
+### Image
+
+- **id** - Used to tag the specific widget/component to access it somewhere else in the program
+- **source**: The path to the image file to be displayed.
+- **opacity**: Changes the opacity of the image
+
+```kv
+Image:
+    id: my_image
+    source: 'my_image.png'
+    opacity: 0.5
+```
+
+### Slider
+
+- **Value**: The current value of the slider.
+- **min**: The minimum value of the slider.
+- **max**: The maximum value of the slider.
+- **on_value**: Calls a function when slider value changes
+
+```kv
+Slider:
+    value: 50
+    min: 0
+    max: 100
+    on_value: root.slider_val_change()
+```
+
+These are just a few examples of the many widgets and parameters available in Kivy. Refer to the official Kivy documentation for a comprehensive list of widgets and their attributes: [Kivy Widgets](https://kivy.org/doc/stable/api-kivy.uix.html)
+
 ### Kv layouts
 
 > `canvas` : `canvas` is used to draw a shape on the screen.
@@ -291,12 +351,16 @@ AsyncImage:
     source: 'assets/main_logo.png'
 ```
 
-### Kivy Screen Manager
+### Screens
+
+The `screens/` directory is intended for Python files that define the behavior and logic of individual screens within your application. These screens are managed and coordinated using Kivy's `ScreenManager` in the main Python file.
+
+Example:
+- `screens/main_screen.py`
+- `screens/map_screen.py`
 
 `Screen` : used to create a screen in the application.
-
 `ScreenManager` : used to manage the transitions between different screens based on application logic.
-
 `ScreenManager.current` property : used to get the name of the current screen.
 
 ### Kivy Animations
@@ -308,10 +372,9 @@ AsyncImage:
 
 The game consists of different screens based on Counter Strike 1.6 theme. There's a map which gives access to different locations. Each screen presents players with a distinct challenge or mission. There are hints which can be located on the bomb. To succeed, players must solve puzzles, and apply their skills effectively. Once all the tasks are accomplished, players gain access to the bomb and must defuse it to win the round.
 
-
 # File Structure
 
-📂 The project is structured into several folders and files:
+The project is structured into several folders and files:
 
 ### 1. **assets/**
 
@@ -360,7 +423,7 @@ To run the Octops Kivy app on your local machine, follow these steps:
 1. Clone the repository to your local machine:
 
    ```sh
-   git clone https://github.com/Afterdie/octops-final
+   git clone https://github.com/Afterdie/octops
    ```
 
 2. Install the required dependencies if you haven't already. You may use a virtual environment for this:
@@ -389,3 +452,4 @@ This is the second section of your document.
 
 # Conclusion
 
+Thank you for being part of our community, and we look forward to sharing countless thrilling moments as we defuse bombs and tackle new challenges together!
