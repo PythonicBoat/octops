@@ -1,14 +1,50 @@
+<MySlider@Slider>
+    cursor_image: "assets/img/knob.png"
+    cursor_size: dp(70), dp(22.5)
+    orientation: 'vertical'
+    background_width: "0sp"
+    padding: "24sp"
+    size_hint: None, 0.428
+    min: 0
+    max: 100
+
 <SpawnScreen>:
-    canvas.before:
-        Rectangle:
-            pos: self.pos
-            size: self.size
-            source: 'assets/img/spawn_splash.png'
-    
+
     FloatLayout:
-        size_hint: None, None
-        size: self.size  # Set the size of the FloatLayout to 1200x400 pixels
-        pos_hint: {'center_x': 0.5, 'center_y': 0.5}  # Center the FloatLayout
+        BoxLayout:
+            id: splash_bg
+            opacity: 1
+            AsyncImage:
+                source: 'assets/img/spawn_splash.png'
+                allow_stretch: True
+                keep_ratio: False
+                size_hint: 1, 1
+
+        MySlider:
+            id: slide1
+            value: 0
+            pos_hint: {'center_x': 0.34, 'center_y': 0.485}  # Centered
+
+        MySlider:
+            id: slide2
+            value: 20
+            pos_hint: {'center_x': 0.5, 'center_y': 0.485}  # Centered
+
+        MySlider:
+            id: slide3
+            value: 10
+            pos_hint: {'center_x': 0.66, 'center_y': 0.485}  # Adjust position as needed
+
+        BoxLayout:
+            id: splash_bg_after
+            orientation: 'vertical'
+            opacity: 0
+            AsyncImage:
+                source: 'assets/img/spawn_splash_after.png'
+                allow_stretch: True
+                keep_ratio: False
+                size_hint: 1, 1
+
         Button:
             size_hint: None,None
             size: dp(60), dp(60)
@@ -18,43 +54,5 @@
 
             Image:
                 source: 'assets/img/button_return.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
-        Slider:
-            id: slide1
-            orientation: 'vertical'
-            size_hint_x: None
-            width: dp(50)
-            height: dp(500)
-            pos_hint: {'center_x': 0.3, 'center_y': 0.5}  # Adjust position as needed
-
-        Slider:
-            id: slide2
-            orientation: 'vertical'
-            size_hint_x: None
-            width: dp(50)
-            height: dp(500)
-            pos_hint: {'center_x': 0.5, 'center_y': 0.5}  # Centered
-
-        Slider:
-            id: slide3
-            orientation: 'vertical'
-            size_hint_x: None
-            width: dp(50)
-            height: dp(500)
-            pos_hint: {'center_x': 0.7, 'center_y': 0.5}  # Adjust position as needed
-
-        #verify_btn
-        Button:
-            size_hint: None,None
-            size: dp(189), dp(68)
-            pos: dp(204), dp(41)
-            background_color: 0,0,0,0
-            on_press: root.check_slider_values()
-
-            Image:
-                source: 'assets/img/doors_btn_verify.png'
-                size_hint: (1, 1)
-                size: dp(189), dp(68)
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
