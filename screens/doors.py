@@ -14,21 +14,18 @@ class DoorsScreen(Screen):
             label_index.text = "0"
         else:
             label_index.text = f"{int(label_index.text) + 1}"
-    
+        DoorsScreen.verify(self)
+
     def decrement_value(self, label_index):
         if(int(label_index.text) == 0):
             label_index.text = "9"
         else:
-            label_index.text = f"{int(label_index.text) - 1}"    
+            label_index.text = f"{int(label_index.text) - 1}"
+        DoorsScreen.verify(self)
 
     def verify(self):
-        code = self.ids.label_1.text + self.ids.label_2.text + self.ids.label_3.text + self.ids.label_4.text
-        print(code)
-        if passcode == int(code):
-            return True
-
-    def verify_btn_press(self):
-        if not DoorsScreen.verified and DoorsScreen.verify(self):
+        code = passcode == int(self.ids.label_1.text + self.ids.label_2.text + self.ids.label_3.text + self.ids.label_4.text)
+        if not DoorsScreen.verified and code:
             DoorsScreen.verified = True
             self.ids.splash_bg.opacity = 0
             self.ids.splash_bg_after.opacity = 1
