@@ -27,6 +27,7 @@
             width: dp(50)
             height: dp(500)
             pos_hint: {'center_x': 0.3, 'center_y': 0.5}  # Adjust position as needed
+            on_value: root.slider_val_change()
 
         Slider:
             id: slide2
@@ -35,6 +36,7 @@
             width: dp(50)
             height: dp(500)
             pos_hint: {'center_x': 0.5, 'center_y': 0.5}  # Centered
+            on_value: root.slider_val_change()
 
         Slider:
             id: slide3
@@ -43,18 +45,4 @@
             width: dp(50)
             height: dp(500)
             pos_hint: {'center_x': 0.7, 'center_y': 0.5}  # Adjust position as needed
-
-        #verify_btn
-        Button:
-            size_hint: None,None
-            size: dp(189), dp(68)
-            pos: dp(204), dp(41)
-            background_color: 0,0,0,0
-            on_press: root.check_slider_values()
-
-            Image:
-                source: 'assets/img/doors_btn_verify.png'
-                size_hint: (1, 1)
-                size: dp(189), dp(68)
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
+            on_value: root.slider_val_change()
