@@ -119,7 +119,138 @@ This is the second section of your document.
 
 # Introduction to Kivy
 
-This is the second section of your document.
+Kivy is an open-source Python library for developing multi-touch applications. It's designed to be highly flexible, cross-platform (Windows, macOS, Linux, Android, and iOS), and user-friendly. Kivy allows you to create beautiful and interactive user interfaces for a wide range of applications, from simple desktop programs to mobile apps.
+
+## Using .kv Files
+
+One of Kivy's standout features is its use of .kv files for declarative user interface design. .kv files are simple text files that describe the structure and behavior of your application's widgets and UI. This separation of UI from code makes it easy to design and maintain complex user interfaces. To use .kv files, you need to:
+
+1. Name your .kv file with a similar name as your Python file (e.g., `main.py` and `main.kv`).
+2. Load the .kv file using the `Builder` class and the `load_file()` method.
+
+Here's a basic example of a .kv file:
+
+```kv
+<MyWidget>:
+    Button:
+        text: "Click Me"
+        on_release: root.button_pressed()
+```
+
+## Widgets
+
+Kivy provides a wide range of widgets to build your user interface. Here are some common widgets and their parameters:
+
+### Layouts
+
+Layouts in Kivy are specialized widgets that are used to arrange and organize other widgets within your user interface. They help you define the structure and positioning of various UI elements in your application
+
+#### BoxLayout
+
+- **orientation**: The orientation of the layout (either 'horizontal' or 'vertical').
+- **spacing**: The space between widgets on the layout.
+
+```kv
+BoxLayout:
+    orientation: 'horizontal'
+    spacing: 10
+    Button:
+        text: 'Button 1'
+    Button:
+        text: 'Button 2'
+```
+
+#### FloatLayout
+
+- **size_hint**: The widget's size relative to the layout's size.
+- **pos_hint**: The widget's position within its parent layout or window. `center_x` and `center_y` take values between 0 and 1 where `(0.5, 0.5)` is the absolute center of the layout.
+
+```kv
+FloatLayout:
+    Button:
+        size_hint: 0.2, 0.2
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+```
+
+### Label
+
+The Label widget in Kivy is used to display text or simple static content within your application. It's a fundamental widget for providing information, instructions, or identifying elements in the user interface.
+
+- **text**: Specifies the text content to be displayed within the label.
+- **font_size**: Sets the font size for the text.
+- **size**: Defines the size of the label based on its content.
+
+```kv
+Label:
+    text: "Welcome to Kivy!"
+    font_size: '24sp'
+    size: self.texture_size
+```
+
+### Button
+
+- **Text**: The text displayed on the button.
+- **on_release**: An event that gets triggered when the button is released.
+- **on_press**: Calls a function when button is pressed
+- **disabled**: Controls whether button will remain enabled/disabled. Can be controlled by conditions
+- **size**: Sets the dimensions of the widget. `dp` parameter on the dimensions refers to density-independent pixels which are used to ensure consistent sizing across different devices.
+
+```kv
+Button:
+    text: "Click Me"
+    size: dp(147), dp(61)
+    on_release: root.button_released()
+    on_press: root.change_image()
+    disabled: True if bg_img.opacity == 0 else False
+```
+
+### Image
+
+- **id** - Used to tag the specific widget/component to access it somewhere else in the program
+- **source**: The path to the image file to be displayed.
+- **opacity**: Changes the opacity of the image
+
+```kv
+Image:
+    id: my_image
+    source: 'my_image.png'
+    opacity: 0.5
+```
+
+### Slider
+
+- **Value**: The current value of the slider.
+- **min**: The minimum value of the slider.
+- **max**: The maximum value of the slider.
+- **on_value**: Calls a function when slider value changes
+
+```kv
+Slider:
+    value: 50
+    min: 0
+    max: 100
+    on_value: root.slider_val_change()
+```
+
+These are just a few examples of the many widgets and parameters available in Kivy. Refer to the official Kivy documentation for a comprehensive list of widgets and their attributes: [Kivy Widgets](https://kivy.org/doc/stable/api-kivy.uix.html)
+
+## Kivy Classes
+
+Kivy classes are a fundamental part of the Kivy framework, designed to help developers build user interfaces and interactive cross-platform applications more efficiently. Some classes and methods used in our app are as follows:
+
+### Screen
+
+The `Screen` class in Kivy is used for creating distinct screens or views within a Kivy application. The `ScreenManager` is often used to manage and switch between different screens. They are a fundamental component for creating navigation flows and separating different parts of an app's user interface.
+
+### SoundLoader
+
+The `SoundLoader` class in Kivy is a utility class that allows you to load and manage audio files(e.g., MP3, WAV) within your Kivy application. You can use `SoundLoader` to load sound files, set volume levels, play, pause, or stop sounds, and manage audio resources efficiently.
+
+### Clock
+
+The `Clock` class in Kivy is a central part of the Kivy framework which provides a mechanism for scheduling functions to run at specific intervals or after a delay. The `Clock` class is useful for implementing animations, updating UI elements, and performing tasks that require precise timing.
+
+Kivy's flexibility and ease of use make it a powerful tool for creating interactive and visually appealing user interfaces in Python. Explore the documentation and start building your own Kivy applications today!
 
 # About the Game
 
