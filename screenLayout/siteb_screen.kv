@@ -27,26 +27,15 @@
                 size: dp(205), dp(68)
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
-
-        BoxLayout:
-            # id: overlay_black
-            # orientation: 'vertical'
-            # opacity: 0  # Initially hidden
-            # AsyncImage:
-            #     source: 'assets/img/overlay.png'
-            #     allow_stretch: True
-            #     keep_ratio: False
-            #     size_hint: 1, 1
-
+            
+        AsyncImage:
             id: defcon_gif
-            orientation: 'vertical'
             opacity: 0  
-            AsyncImage:
-                color: 0.3, 0.3, 0.3, 1
-                source: 'assets/img/siteb_defcon.gif'
-                allow_stretch: True
-                keep_ratio: False
-                size_hint: 1, 1
+            color: 0.3, 0.3, 0.3, 1
+            source: 'assets/img/siteb_defcon.gif'
+            allow_stretch: True
+            keep_ratio: False
+            size_hint: 1, 1
 
         AsyncImage:
             id: octocat_prompt
