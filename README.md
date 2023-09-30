@@ -8,8 +8,20 @@
 
 1. [Introduction](#introduction)
 2. [Steps to Contribution](#contributing-guidelines)
+- [Replit](#replit) (Beginner)
+- [CLI](#cli) (Intermediate)
 3. [Introduction to Python](#introduction-to-python)
 4. [Introduction to Kivy](#introduction-to-kivy)
+- [Installation of Kivy](#installation-of-kivy)
+- [Kivy Application](#kivy-application)
+- [Kivy Language](#kivy-language)
+- [Kivy Widgets](#kivy-widgets)
+- [Kivy Properties](#kivy-properties)
+- [Kivy Events](#kivy-events)
+- [Kivy Graphics](#kivy-graphics)
+- [Kivy Layouts](#kivy-layouts)
+- [Kivy Screen Manager](#kivy-screen-manager)
+- [Kivy Animations](#kivy-animations)
 5. [About the Game](#about-the-game)
 6. [File Structure](#file-structure)
 7. [Issue Listing](#issue-listing)
@@ -21,6 +33,11 @@ Welcome to the open-source project, **Octops**! In Octops, we've combined the no
 If you're eager to dive into the action and defuse the bomb, follow this documentation to set up and play the game. We'll guide you through the installation process and provide all the necessary information to get you started.
 
 # Steps to Contribution
+
+# Replit
+
+
+# CLI
 
 ## Fork the Repository
 
@@ -115,11 +132,177 @@ Congrats! You just completed the standard _fork -> clone -> edit -> pull request
 
 # Introduction to Python
 
-This is the second section of your document.
+`Self`- 
+
 
 # Introduction to Kivy
 
-This is the second section of your document.
+> Kivy is a free and open-source Python framework for creating cross-platform applications with a natural user interface, and it can be easily integrated into any python project.
+
+### Installation of Kivy
+
+> Installing on Windows
+```sh
+python -m pip install kivy
+```
+
+> Installing on Linux/Mac
+```sh
+python3 -m pip install kivy
+```
+
+### Kivy Application
+- `App` class : It is the base class for creating Kivy applications. It handles the initialization of the application, and it manages the life cycle of the application as well.
+- `build()` method : used to return the root widget of the application. It is a mandatory method in the `App` class.
+- `run()` method : used to run the application. It is a mandatory method in the `App` class.
+
+### Kivy Language
+- `kv` files : `kv` files are used to define the structure and appearance of the application's screens and their layouts. These files are built to their respective screens using the `Builder.load_file()` method.
+- `Builder.load_file()` method : `Builder.load_file()` method is used to load the `kv` file and build it to the screen.
+
+### Kivy Widgets
+- `Label` widget : 
+```kv
+Label:
+    text: 'Hello World'
+```
+- `Button` widget : 
+```kv
+Button:
+      text: 'Click Me'
+      size_hint: 0.2, 0.2
+      pos_hint: {'x': 0.4, 'y': 0.4}
+      color: 1, 0, 0, 1
+      on_press: root.on_press()
+```
+- `Shape` widget :
+```kv
+Shape:
+    Rectangle:
+        pos: 100, 100
+        size: 100, 100
+```  
+- `Image` widget :
+```kv
+Image:
+   source: 'assets/main_logo.png'
+   pos: 100, 100
+   size: 100, 100
+```
+
+### Kivy Properties
+> `size` property
+```kv
+size: 100, 100
+```
+
+> `pos` property
+```kv
+pos: 100, 100
+```
+
+> `size_hint` property
+```kv
+size_hint: 0.5, 0.5
+```
+
+> `color` property
+```kv
+color: 1, 0, 0, 1
+```
+
+> `source` property
+```kv
+source: 'assets/main_logo.png'
+```
+
+### Kivy Events
+> `on_press` event : Its fired when the user presses the button.
+```kv
+on_press: root.on_press()
+```
+
+> `on_value` event : It's fired when the value of the widget changes.
+```kv
+on_value: root.on_value()
+```
+
+> `on_event` event : Its fired when the event occurs.
+```kv
+on_event: root.on_event()
+```
+
+### Kivy Graphics
+- `Rectangle` instruction : `Rectangle` instruction is used to draw a rectangle on the screen.
+```kv
+Rectangle:
+    pos: 100, 100
+    size: 100, 100
+```
+
+### Kv layouts
+
+> `canvas` : `canvas` is used to draw a shape on the screen.
+```kv
+canvas:
+    Rectangle:
+        pos: 100, 100
+        size: 100, 100
+```
+`FloatLayout` : used to arrange the widgets in a floating position.
+
+`BoxLayout` : used to arrange the widgets in a horizontal or vertical manner.
+
+`GridLayout` : used to arrange the widgets in a grid manner.
+
+```kv
+<AllLayouts>
+      FloatLayout:
+         Button:
+               size_hint: 0.2, 0.2
+               pos_hint: {'x': 0.4, 'y': 0.4}
+               text: 'FloatLayout'
+      BoxLayout:
+         Button:
+               size_hint: 0.2, 0.2
+               text: 'BoxLayout'
+         Button:
+               size_hint: 0.2, 0.2
+               text: 'BoxLayout'
+      GridLayout:
+         cols: 2
+         Button:
+               size_hint: 0.2, 0.2
+               text: 'GridLayout'
+         Button:
+               size_hint: 0.2, 0.2
+               text: 'GridLayout'
+         Button:
+               size_hint: 0.2, 0.2
+               text: 'GridLayout'
+         Button:
+               size_hint: 0.2, 0.2
+               text: 'GridLayout'
+```
+
+`AsyncImage` : `AsyncImage` is used to display an image asynchronously (without blocking the main thread.)
+```kv
+AsyncImage:
+    source: 'assets/main_logo.png'
+```
+
+### Kivy Screen Manager
+
+`Screen` : used to create a screen in the application.
+
+`ScreenManager` : used to manage the transitions between different screens based on application logic.
+
+`ScreenManager.current` property : used to get the name of the current screen.
+
+### Kivy Animations
+- `Animation`  
+- `start()` method
+- `stop()` method
 
 # About the Game
 
@@ -128,7 +311,7 @@ The game consists of different screens based on Counter Strike 1.6 theme. There'
 
 # File Structure
 
-The project is structured into several folders and files:
+📂 The project is structured into several folders and files:
 
 ### 1. **assets/**
 
@@ -206,4 +389,3 @@ This is the second section of your document.
 
 # Conclusion
 
-Thank you for being part of our community, and we look forward to sharing countless thrilling moments as we defuse bombs and tackle new challenges together!
