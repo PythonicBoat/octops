@@ -47,5 +47,8 @@ class Octops(App):
         sm.add_widget(SpawnScreen(name='spawn'))
 
         return sm
+    
+    def open_settings(self, *largs):
+        pass
  
 Octops().run()
