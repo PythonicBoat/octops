@@ -16,4 +16,4 @@ class MainScreen(Screen):
         self.ids.timer_value.text = str(get_time())+"s"
 
     def website(self):
-        webbrowser.open('https://github.com/Afterdie/octops')
+        webbrowser.open('https://d3fc0n.pythonicboat.repl.co/')

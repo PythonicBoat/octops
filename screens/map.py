@@ -11,11 +11,11 @@ class MapScreen(Screen):
     timer_event = None
     def on_enter(self):
         if self.timer_event is None:
-            MapScreen.timer_event = Clock.schedule_interval(MapScreen.update_timer, 1)
+            MapScreen.timer_event = Clock.schedule_interval(MapScreen.update_timer, 0.001)
 
     def update_timer(self):
         MapScreen.timer_seconds += 1
 
     def stop_timer(self):
         MapScreen.timer_event.cancel()
-        set_time(MapScreen.timer_seconds)
+        set_time(MapScreen.timer_seconds / 100)
