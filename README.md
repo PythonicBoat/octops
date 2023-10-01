@@ -27,6 +27,8 @@
 Welcome to the open-source project, **Octops**! In Octops, we've combined the nostalgia of the original game **Counter Strike 1.6** with an exciting new gameplay concept.
 If you're eager to dive into the action and defuse the bomb, follow this documentation to set up and play the game. We'll guide you through the installation process and provide all the necessary information to get you started.
 
+Check out this [link](https://www.figma.com/file/VGuXGZllFERD0WiJMPcf71/octops?type=design&node-id=5-51&mode=design&t=hVvEBqkANsNP87BQ-0) to understand the layout of the various in-game windows.
+
 # Contributing Guidelines
 
 We welcome contributions from the community to enhance our Octops project. To maintain consistency and organization, please follow these guidelines when creating branches for your contributions:
