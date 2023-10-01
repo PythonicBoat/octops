@@ -223,16 +223,18 @@ python3 -m pip install kivy
 - `Label` widget : 
 ```kv
 Label:
-    text: 'Hello World'
+    text: "Welcome to Kivy!"
+    font_size: '24sp'
+    size: self.texture_size
 ```
 - `Button` widget : 
 ```kv
 Button:
-      text: 'Click Me'
-      size_hint: 0.2, 0.2
-      pos_hint: {'x': 0.4, 'y': 0.4}
-      color: 1, 0, 0, 1
-      on_press: root.on_press()
+    text: "Click Me"
+    size: dp(147), dp(61)
+    on_release: root.button_released()
+    on_press: root.change_image()
+    disabled: True if bg_img.opacity == 0 else False
 ```
 - `Shape` widget :
 ```kv
@@ -244,11 +246,20 @@ Shape:
 - `Image` widget :
 ```kv
 Image:
+   id: my_image
    source: 'assets/main_logo.png'
    pos: 100, 100
    size: 100, 100
+   opacity: 0.5
 ```
-
+- `Slider` widget :
+```kv
+Slider:
+    value: 50
+    min: 0
+    max: 100
+    on_value: root.slider_val_change()
+```
 ### Kivy Properties
 > `size` property
 ```kv
@@ -297,66 +308,6 @@ on_event: root.on_event()
 Rectangle:
     pos: 100, 100
     size: 100, 100
-```
-
-### Label
-
-The Label widget in Kivy is used to display text or simple static content within your application. It's a fundamental widget for providing information, instructions, or identifying elements in the user interface.
-
-- **text**: Specifies the text content to be displayed within the label.
-- **font_size**: Sets the font size for the text.
-- **size**: Defines the size of the label based on its content.
-
-```kv
-Label:
-    text: "Welcome to Kivy!"
-    font_size: '24sp'
-    size: self.texture_size
-```
-
-### Button
-
-- **Text**: The text displayed on the button.
-- **on_release**: An event that gets triggered when the button is released.
-- **on_press**: Calls a function when button is pressed
-- **disabled**: Controls whether button will remain enabled/disabled. Can be controlled by conditions
-- **size**: Sets the dimensions of the widget. `dp` parameter on the dimensions refers to density-independent pixels which are used to ensure consistent sizing across different devices.
-
-```kv
-Button:
-    text: "Click Me"
-    size: dp(147), dp(61)
-    on_release: root.button_released()
-    on_press: root.change_image()
-    disabled: True if bg_img.opacity == 0 else False
-```
-
-### Image
-
-- **id** - Used to tag the specific widget/component to access it somewhere else in the program
-- **source**: The path to the image file to be displayed.
-- **opacity**: Changes the opacity of the image
-
-```kv
-Image:
-    id: my_image
-    source: 'my_image.png'
-    opacity: 0.5
-```
-
-### Slider
-
-- **Value**: The current value of the slider.
-- **min**: The minimum value of the slider.
-- **max**: The maximum value of the slider.
-- **on_value**: Calls a function when slider value changes
-
-```kv
-Slider:
-    value: 50
-    min: 0
-    max: 100
-    on_value: root.slider_val_change()
 ```
 
 These are just a few examples of the many widgets and parameters available in Kivy. Refer to the official Kivy documentation for a comprehensive list of widgets and their attributes: [Kivy Widgets](https://kivy.org/doc/stable/api-kivy.uix.html)
