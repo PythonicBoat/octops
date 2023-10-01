@@ -20,7 +20,7 @@ class SiteBScreen(Screen):
         return Animation(duration=delay)
 
     def on_enter(self):
-        if not SiteBScreen.visited:
+        if not SiteBScreen.visited and not (get_spawn() and get_sitea() and get_doors()):
             SiteBScreen.visited = True
             octocat_icon = self.Delay(0.5) + Animation(color=(1,1,1,1), pos= (dp(0), dp(0)), duration=0.2, t='out_quad') + self.Delay(3.5) + Animation(color=(1,1,1,0), duration=0.2, t='out_quad')
             octocat_icon.start(self.ids.octocat_icon)
