@@ -27,10 +27,10 @@
                 size: dp(205), dp(68)
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
-            
+
         AsyncImage:
             id: defcon_gif
-            opacity: 0  
+            opacity: 0
             color: 0.3, 0.3, 0.3, 1
             source: 'assets/img/siteb_defcon.gif'
             allow_stretch: True
@@ -46,6 +46,16 @@
             color: 0,0,0,0
             size: dp(302), dp(109)
             pos: dp(-100), dp(154)
+
+        AsyncImage:
+            id: octocat_hint
+            source: 'assets/img/siteb_hint_prompt.png'
+            allow_stretch: True
+            keep_ratio: False
+            size_hint: None,None
+            color: 0,0,0,0
+            size: dp(340), dp(156)
+            pos: dp(-100), dp(155)
 
         AsyncImage:
             id: octocat_defcon_prompt
