@@ -192,8 +192,82 @@ Congrats! You just completed the standard _fork -> clone -> edit -> pull request
 
 # Introduction to Python
 
+Python is a popular, beginner-friendly programming language known for its simplicity and versatility. In this guide, we'll cover the basics such as data types, syntax, classes and methods from object-oriented programming (OOP), and import statements.
 
+### Getting Started
 
+Before we dive into Python programming, make sure you have Python installed on your computer. You can download Python from the [official Python](https://www.python.org/downloads/) website and follow the default installation instructions. Once installed, you can run Python code in an interactive environment called the Python Shell or by creating Python scripts in an IDE such as [Visual Studio Code](https://code.visualstudio.com/) or [Pycharm](https://www.jetbrains.com/pycharm/).
+
+## Data Types
+
+Python has several built-in data types, including:
+
+- **Integers**: Whole numbers, e.g., `5`, `-10`.
+- **Floats**: Decimal numbers, e.g., `3.14`, `-0.5`.
+- **Strings**: Text enclosed in single or double quotes, e.g., `'Hello, Python!'`, `"Data Science"`.
+- **Lists**: Ordered collections of items, e.g., `[1, 2, 3]`, `['apple', 'banana', 'cherry']`.
+- **Dictionaries**: Key-value pairs, e.g., `{'name': 'Alice', 'age': 30}`.
+- **Booleans**: True or False values, e.g., `True`, `False`.
+
+## Basic Syntax
+
+Python uses a simple and readable syntax. Here are some basic syntax rules:
+
+- Use indentation (whitespace) to define code blocks.
+- Comments start with `#` and are ignored by the interpreter.
+- Variables are created by assigning values to names, e.g., `x = 10`.
+- Print statements: `print("Hello, Python!")`.
+- f-strings are a convenient way to embed variables and expressions within strings: `f"{variable} text"`.
+- Import external libraries and modules using import statement: `import math`.
+
+Example:
+
+```python
+import math
+# This is a comment
+x = 16
+if x > 5:
+    y = math.sqrt(x)
+    print(f"{y} is the square root of {x}.")
+```
+
+## User Defined Functions
+
+In Python, you can define your own functions to encapsulate a block of code. Functions are reusable and can take parameters (inputs) and return values (outputs).
+
+Example:
+
+```python
+# Define a function
+def greet(name):
+    return f"Hello, {name}!"
+
+# Call the function
+message = greet("Alice")
+print(message)
+```
+
+## Object-Oriented Programming (OOP)
+
+Python supports OOP principles, allowing you to create classes and objects. A class defines a blueprint for objects, and objects are instances of a class. Classes can have attributes (variables) and methods (functions).
+
+Example:
+
+```python
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        print(f"{self.name} says Woof!")
+
+my_dog = Dog("Buddy")
+my_dog.bark()
+```
+
+This introduction provides a basic foundation for Python programming, but if you'd like a quick reference or in-depth details, you can explore the [Python Cheatsheet](https://www.pythoncheatsheet.org/cheatsheet/basics) for handy tips and commands. For comprehensive documentation and tutorials, visit the official [Python Documentation](https://docs.python.org/3.11/).
+
+---
 # Introduction to Kivy
 
 Kivy is a free and open-source Python framework for creating cross-platform applications with a natural user interface, and it can be easily integrated into any python project.
